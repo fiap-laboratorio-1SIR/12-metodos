@@ -2,6 +2,10 @@
 método deverá somar e imprimir os dois valores.
  */
 
+// escopo de variável --> local onde a variável pode ser acessada
+// escopo local --> variáveis declaradas no método
+// escopo global --> a variável pode ser acessada em todo o programa
+
 import java.util.Scanner;
 
 public class Exemplo02 {
@@ -14,13 +18,14 @@ public class Exemplo02 {
         System.out.print("Valor 2 --> ");
         valor2 = sc.nextInt();
 
-        somar(valor1, valor2);
+        resultado = somar(valor1, valor2); // argumentos --> valores enviaados para o método
+        System.out.println("resultado = " + resultado);
 
     }
 
-    public static void somar(int valor1, int valor2) {
+    public static int somar(int valor1, int valor2) {
         int resultado;
         resultado = valor1 + valor2;
-        System.out.println(resultado);
+        return resultado;
     }
 }
